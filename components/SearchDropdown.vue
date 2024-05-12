@@ -1,6 +1,6 @@
 <script>
 import { watchEffect } from "vue";
-import getSearchResults from "./getSearchResults";
+import getSearchResults from "../composables/getSearchResults";
 import ImageOrPlaceholder from "./ImageOrPlaceholder.vue";
 
 export default {

@@ -3,6 +3,7 @@ import { ref } from 'vue';
 const getSearchResults = () => {
     const searchResults = ref([]);
     const loading = ref(false);
+    const runtimeConfig = useRuntimeConfig()
 
     const loadSearchResults = (search) => {
         loading.value = true;
@@ -21,6 +22,7 @@ const getSearchResults = () => {
                 .catch(error => {
                     loading.value = false;
                     console.error(error);
+                    console.log(runtimeConfig);
                 });
         } else {
             searchResults.value = [];

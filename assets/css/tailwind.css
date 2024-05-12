@@ -183,6 +183,16 @@ fieldset {
   padding: 0;
 }
 
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.inp {
+    background-color: #6b7280;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
 ol,
 ul {
   list-style: none;
@@ -589,6 +599,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+  }
+
 .gap-8 {
   gap: 2rem;
 }
@@ -954,4 +968,16 @@ video {
     padding-left: 8rem;
     padding-right: 8rem;
   }
+}
+
+.max-w-15 {
+    max-width: 10rem;
+}
+
+.border-20 {
+    border-radius: 20px;
+}
+
+.border-5 {
+    border-radius: 5px;
 }

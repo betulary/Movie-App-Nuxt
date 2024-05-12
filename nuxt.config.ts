@@ -1,3 +1,5 @@
+const Dotenv = require('dotenv-webpack');
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   buildModules: ['@nuxtjs/tailwindcss'],
@@ -21,4 +23,7 @@ export default defineNuxtConfig({
     }
   },
   components: true,
+  runtimeConfig: {
+    apiSecret: process.env.NUXT_API_SECRET,
+  },
 });

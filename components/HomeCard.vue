@@ -1,9 +1,15 @@
 <template>
-    <div class="movie-card-container flex flex-wrap items-center gap-8 ">
-        <div
+    <div class="movie-card-container">
+      <Swiper
+        class="swiper"
+        :slidesPerView="5"
+        :mousewheel=true
+        :spaceBetween="30"
+        v-if="movies.length"
+      >
+        <SwiperSlide
             v-for="movie in movies"
             :key="movie.id"
-            class="w-275"
         >
             <div class="movie-card flex flex-col items-center">
             <img
@@ -34,6 +40,10 @@
                 </svg>
             </div>
         </div>
+        </SwiperSlide>
+        </Swiper>
+        <div v-else>
+            <p>Loading..</p>
         </div>
     </div>
 </template>
