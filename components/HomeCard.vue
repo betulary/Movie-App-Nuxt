@@ -11,7 +11,7 @@
             v-for="movie in movies"
             :key="movie.id"
         >
-            <div class="movie-card flex flex-col items-center">
+            <div class="movie-card flex flex-col items-center" @click="goToMovieDetail(movie.id)">
             <img
                 class="movies-image"
                 :src="`https://image.tmdb.org/t/p/w220_and_h330_face${movie.poster_path}`"
@@ -70,6 +70,9 @@ export default {
         },
         isFavorite(movie) {
             return this.favorites.some((m) => m.id === movie.id) || false;
+        },
+        goToMovieDetail(movieId) {
+            this.$router.push({ path: `/${movieId}` });
         },
     },
   };

@@ -543,6 +543,10 @@ video {
   width: 16rem;
 }
 
+.w-70 {
+  width: 24rem;
+}
+
 .w-100 {
   width: 62rem;
 }
@@ -607,8 +611,23 @@ video {
   gap: 2rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-10 {
     gap: 10px;
+}
+
+.genres-li {
+  display: inline-block;
+  margin: 5px 2px;
+  padding: 2px 3px;
+  border: 1px solid #999;
+  border-radius: .30rem;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffffff;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {

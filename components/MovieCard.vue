@@ -4,6 +4,7 @@
             v-for="movie in movies"
             :key="movie.id"
             class="w-275"
+            @click="goToMovieDetail(movie.id)"
         >
             <div class="movie-card flex flex-col items-center">
             <img
@@ -60,6 +61,9 @@ export default {
         },
         isFavorite(movie) {
             return this.favorites.some((m) => m.id === movie.id) || false;
+        },
+        goToMovieDetail(movieId) {
+            this.$router.push({ path: `/${movieId}` });
         },
     },
   };
